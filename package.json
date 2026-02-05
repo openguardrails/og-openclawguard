@@ -1,6 +1,6 @@
 {
   "name": "og-openclawguard",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Agent-based prompt injection detection for OpenClaw powered by OpenGuardrails SOTA security",
   "type": "module",
   "main": "index.ts",

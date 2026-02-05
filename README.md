@@ -56,10 +56,7 @@ Long Content (email/webpage/document)
 ## Installation
 
 ```bash
-# Install via npm
-npm i og-openclawguard
-
-# Or install via OpenClaw plugins
+# Install from npm
 openclaw plugins install og-openclawguard
 
 # Restart gateway to load the plugin
