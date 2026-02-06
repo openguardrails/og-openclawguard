@@ -1,6 +1,6 @@
 {
   "name": "openguardrails",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Agent-based prompt injection detection for OpenClaw powered by OpenGuardrails SOTA security",
   "type": "module",
   "main": "index.ts",
