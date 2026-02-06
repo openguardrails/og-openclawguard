@@ -1,15 +1,15 @@
-# OpenGuardrails for OpenClaw
+# MoltGuard
 
-[![npm version](https://img.shields.io/npm/v/openguardrails-for-openclaw.svg)](https://www.npmjs.com/package/openguardrails-for-openclaw)
-[![GitHub](https://img.shields.io/github/license/openguardrails-for-openclaw/openguardrails-for-openclaw)](https://github.com/openguardrails-for-openclaw/openguardrails-for-openclaw)
+[![npm version](https://img.shields.io/npm/v/moltguard.svg)](https://www.npmjs.com/package/moltguard)
+[![GitHub](https://img.shields.io/github/license/moltguard/moltguard)](https://github.com/openguardrails/moltguard)
 
 Detect prompt injection attacks hidden in long content (emails, web pages, documents).
 
-Powered by [OpenGuardrails](https://openguardrails-for-openclaw.com) SOTA security detection capabilities.
+Powered by [OpenGuardrails](https://openguardrails.com) SOTA security detection capabilities.
 
-**GitHub**: [https://github.com/openguardrails-for-openclaw/openguardrails-for-openclaw](https://github.com/openguardrails-for-openclaw/openguardrails-for-openclaw)
+**GitHub**: [https://github.com/openguardrails/moltguard](https://github.com/openguardrails/moltguard)
 
-**npm**: [https://www.npmjs.com/package/openguardrails-for-openclaw](https://www.npmjs.com/package/openguardrails-for-openclaw)
+**npm**: [https://www.npmjs.com/package/moltguard](https://www.npmjs.com/package/moltguard)
 
 ## OpenGuardrails - State-of-the-Art Security Detection
 
@@ -57,7 +57,7 @@ Long Content (email/webpage/document)
 
 ```bash
 # Install from npm
-openclaw plugins install openguardrails-for-openclaw
+openclaw plugins install moltguard
 
 # Restart gateway to load the plugin
 openclaw gateway restart
@@ -66,13 +66,13 @@ openclaw gateway restart
 ## Verify Installation
 
 ```bash
-# Check plugin list, confirm openguardrails-for-openclaw status is "loaded"
+# Check plugin list, confirm moltguard status is "loaded"
 openclaw plugins list
 ```
 
 You should see:
 ```
-| OpenGuardrails for OpenClaw | openguardrails-for-openclaw | loaded | ...
+| MoltGuard | moltguard | loaded | ...
 ```
 
 ## Commands
@@ -91,7 +91,7 @@ You should see:
 Download the test file with hidden injection:
 
 ```bash
-curl -L -o /tmp/test-email.txt https://raw.githubusercontent.com/openguardrails-for-openclaw/openguardrails-for-openclaw/main/samples/test-email.txt
+curl -L -o /tmp/test-email.txt https://raw.githubusercontent.com/openguardrails/moltguard/main/samples/test-email.txt
 ```
 
 ### 2. Test in OpenClaw
@@ -106,19 +106,19 @@ Read the contents of /tmp/test-email.txt
 
 ```bash
 # Real-time log monitoring
-tail -f /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | grep "openguardrails-for-openclaw"
+tail -f /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log | grep "moltguard"
 
 # Or use openclaw command
-openclaw logs --follow | grep "openguardrails-for-openclaw"
+openclaw logs --follow | grep "moltguard"
 ```
 
 If detection succeeds, you'll see logs like:
 
 ```
-[openguardrails-for-openclaw] tool_result_persist triggered for "read"
-[openguardrails-for-openclaw] Analyzing tool result from "read" (1183 chars)
-[openguardrails-for-openclaw] Analysis complete in 5896ms: INJECTION DETECTED
-[openguardrails-for-openclaw] INJECTION DETECTED in tool result from "read": Chunk 1: Contains instructions to override guidelines and execute a malicious shell command
+[moltguard] tool_result_persist triggered for "read"
+[moltguard] Analyzing tool result from "read" (1183 chars)
+[moltguard] Analysis complete in 5896ms: INJECTION DETECTED
+[moltguard] INJECTION DETECTED in tool result from "read": Chunk 1: Contains instructions to override guidelines and execute a malicious shell command
 ```
 
 ### 4. View Statistics
@@ -210,7 +210,7 @@ Configure hooks in `~/.openclaw/openclaw.json` to forward alerts to Slack/Discor
   "hooks": {
     "og-alert": {
       "url": "https://your-webhook-url.com/alert",
-      "events": ["plugin:openguardrails-for-openclaw:injection-detected"]
+      "events": ["plugin:moltguard:injection-detected"]
     }
   }
 }
@@ -251,7 +251,7 @@ Edit OpenClaw config file (`~/.openclaw/openclaw.json`):
 {
   "plugins": {
     "entries": {
-      "openguardrails-for-openclaw": {
+      "moltguard": {
         "enabled": true,
         "config": {
           "blockOnRisk": true,
@@ -276,7 +276,7 @@ Edit OpenClaw config file (`~/.openclaw/openclaw.json`):
 ## Uninstall
 
 ```bash
-openclaw plugins uninstall openguardrails-for-openclaw
+openclaw plugins uninstall moltguard
 openclaw gateway restart
 ```
 
@@ -284,8 +284,8 @@ openclaw gateway restart
 
 ```bash
 # Clone repository
-git clone https://github.com/openguardrails-for-openclaw/openguardrails-for-openclaw.git
-cd openguardrails-for-openclaw
+git clone https://github.com/openguardrails/moltguard.git
+cd moltguard
 
 # Install dependencies
 npm install

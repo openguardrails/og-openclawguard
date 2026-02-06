@@ -1,6 +1,6 @@
 {
-  "name": "openguardrails-for-openclaw",
-  "version": "3.0.1",
+  "name": "moltguard",
+  "version": "3.0.2",
   "description": "Agent-based prompt injection detection for OpenClaw powered by OpenGuardrails SOTA security",
   "type": "module",
   "main": "index.ts",
@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openguardrails/openguardrails-for-openclaw.git"
+    "url": "git+https://github.com/openguardrails/moltguard.git"
   },
   "bugs": {
-    "url": "https://github.com/openguardrails/openguardrails-for-openclaw/issues"
+    "url": "https://github.com/openguardrails/moltguard/issues"
   },
-  "homepage": "https://github.com/openguardrails/openguardrails-for-openclaw#readme",
+  "homepage": "https://github.com/openguardrails/moltguard#readme",
   "files": [
     "index.ts",
     "agent/",

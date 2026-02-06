@@ -17,8 +17,8 @@ import { createAnalysisStore } from "./memory/store.js";
 // Constants
 // =============================================================================
 
-const PLUGIN_ID = "openguardrails-for-openclaw";
-const PLUGIN_NAME = "OpenGuardrails for OpenClaw";
+const PLUGIN_ID = "moltguard";
+const PLUGIN_NAME = "MoltGuard";
 const LOG_PREFIX = `[${PLUGIN_ID}]`;
 
 // =============================================================================
@@ -242,7 +242,7 @@ const openClawGuardPlugin = {
     // Register status command
     api.registerCommand({
       name: "og_status",
-      description: "Show OpenGuardrails for OpenClaw status and statistics",
+      description: "Show MoltGuard status and statistics",
       requireAuth: true,
       handler: async () => {
         const stats = store.getStats();
@@ -250,7 +250,7 @@ const openClawGuardPlugin = {
         const recentLogs = store.getRecentLogs(5);
 
         const statusLines = [
-          "**OpenGuardrails for OpenClaw Status**",
+          "**MoltGuard Status**",
           "",
           `- Enabled: ${config.enabled}`,
           `- Block on risk: ${config.blockOnRisk}`,
